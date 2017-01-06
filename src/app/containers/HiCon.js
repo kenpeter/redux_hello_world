@@ -1,6 +1,11 @@
+
+import { connect } from 'react-redux';
+import Hi from "../components/Hi";
+
+
 const mapStateToProps = (state, ownProps) => {
   return {
-    message: state.HelloWordReducer.message
+    message: state.HiReducer.message
   }
 }
 
@@ -10,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: () => {
-      dispatch({ type: "HELLO_WORLD" })
+      console.log("HiCon.js, hi");
+      dispatch({ type: "HI" })
     }
   }
 }
@@ -18,10 +24,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 // const
 // connect
 // map them to Hello component
-export const HelloWorld = connect(
+const HiCon = connect(
   // state to props
   mapStateToProps,
 
   // dispatch to props
   mapDispatchToProps
-)(App);
+)(Hi);
+
+export default HiCon;

@@ -1,6 +1,6 @@
 ## Intro
 
-Demo app based on this: https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+Demo app based on this: https://github.com/vaibhavmule/react-redux-helloworld.git
 
 ## Install
 

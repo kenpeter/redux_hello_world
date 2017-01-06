@@ -1,7 +1,4 @@
-// what exactly is store, it stores reducer and middle ware
-// create store
-// combined reducer
-// middle ware
+// store basically attach the listeners (reducers)
 import {
   createStore, 
   combineReducers, 
@@ -14,13 +11,14 @@ import logger from "redux-logger";
 // thunk for promise
 import thunk from "redux-thunk";
 import promise from "redux-promise-middleware";
-
-import HelloWordReducer from "./reducers/HelloWorldReducer";
+import HelloWorldReducer from "./reducers/HelloWorldReducer";
+import HiReducer from "./reducers/HiReducer";
 
 // it has reducer, middle ware and export it.
 export default createStore(
   combineReducers({
-    HelloWordReducer
+    HelloWorldReducer,
+    HiReducer
   }),
   
   applyMiddleware(logger(), thunk, promise())

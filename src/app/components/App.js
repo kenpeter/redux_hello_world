@@ -1,13 +1,18 @@
 import React from "react";
 
-import MyComp from '../components/MyComp';
+import HelloCon from '../containers/HelloCon';
+import HiCon from '../containers/HiCon';
 
-export class App extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <MyComp />
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className="container">
+      <HelloCon />
+      
+      <hr/>
+      
+      <HiCon />
+    </div>
+  );
 }
+
+export default App;
